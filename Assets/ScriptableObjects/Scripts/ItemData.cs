@@ -13,8 +13,5 @@ public class ItemData : ScriptableObject
     public Sprite icon;
 
     [Header("Stat Info")]
-    public int attack;
-    public int defense;
-    public int maxhealthPoint;
-    public int criticalChance;
+    public CharacterStatSO itemStat;
 }

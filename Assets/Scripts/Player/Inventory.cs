@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour
     public static Inventory instance;
     public List<ItemData> inventory = new List<ItemData>();
     public InventorySlot[] slots;
-    
+
     private void Awake()
     {
         instance = this;
@@ -34,6 +34,24 @@ public class Inventory : MonoBehaviour
         for (int i = 0; i < inventory.Count ;i++)
         {
             slots[i].InvetoryItemDataUpdate(inventory[i]);
+        }
+    }
+
+    public void ItemEquipStatUpdate(bool isEquip, int index)
+    {
+        if (index >= inventory.Count) return;
+
+        if (isEquip)
+        {
+            GameManager.instance.PlayerCharacterStatsHandler.AddStatModifier(inventory[index].itemStat);
+            GameManager.instance.PlayerStatUpdate();
+            //Debug.Log("Add!" + index);
+        }
+        else
+        {
+            GameManager.instance.PlayerCharacterStatsHandler.RemoveStatModifier(inventory[index].itemStat);
+            GameManager.instance.PlayerStatUpdate();
+            //Debug.Log("Remove!" + index);
         }
     }
 }

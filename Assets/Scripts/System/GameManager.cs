@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
     private GameObject _player;
 
     public List<ItemData> itemdatas = new List<ItemData>();
+    public CharacterStatsHandler PlayerCharacterStatsHandler
+    {
+        get { return _characterStatsHandler; } 
+    }
 
 
     private void Awake()
@@ -41,7 +45,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void PlayerStatUpdate()
+    public void PlayerStatUpdate()
     {
         attackText.text = _characterStatsHandler.CurrentStats.statSO.attack.ToString();
         defenseText.text = _characterStatsHandler.CurrentStats.statSO.defense.ToString();

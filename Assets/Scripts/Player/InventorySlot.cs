@@ -9,7 +9,7 @@ public class InventorySlot : MonoBehaviour
     public Transform equippedImage;
 
     public int index;
-    public bool isEquip;
+    public bool isEquip = false;
 
     private Image _currentSlotImage;
 
@@ -27,5 +27,12 @@ public class InventorySlot : MonoBehaviour
         }
         
         _currentSlotImage.sprite = icon;
+    }
+
+    public void SetEquipItem()
+    {
+        isEquip = !isEquip;
+
+        Inventory.instance.ItemEquipStatUpdate(isEquip, index);
     }
 }

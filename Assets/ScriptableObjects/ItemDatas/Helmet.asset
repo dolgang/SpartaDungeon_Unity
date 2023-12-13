@@ -15,7 +15,4 @@ MonoBehaviour:
   itemname: "\uC77C\uBC18 \uD5EC\uBA67"
   description: "\uC77C\uBC18 \uD5EC\uBA67\uC785\uB2C8\uB2E4."
   icon: {fileID: 21300000, guid: 67eaf2a7d1686074684270d1821c55cb, type: 3}
-  attack: 0
-  defense: 2
-  maxhealthPoint: 0
-  criticalChance: 0
+  itemStat: {fileID: 11400000, guid: 59a6577d7049cd94f97214fc8b3c3311, type: 2}
