@@ -3330,6 +3330,10 @@ MonoBehaviour:
   defenseText: {fileID: 529044027}
   maxHealthText: {fileID: 1610919969}
   criticalChanceText: {fileID: 1515337872}
+  itemdatas:
+  - {fileID: 11400000, guid: 481ba8a693cfe3f429379ff899c946af, type: 2}
+  - {fileID: 11400000, guid: ff37cdc56b4986b4e8efd8b767c9f04d, type: 2}
+  - {fileID: 11400000, guid: 47d8a4690d5badf4faff575c11b8668d, type: 2}
 --- !u!4 &791088117
 Transform:
   m_ObjectHideFlags: 0
@@ -4369,6 +4373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1034211894}
   - component: {fileID: 1034211895}
+  - component: {fileID: 1034211896}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4405,6 +4410,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterStats:
     statSO: {fileID: 11400000, guid: e77d3e5a490d50d4cb3db01023824fb1, type: 2}
+--- !u!114 &1034211896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034211893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75926ac433b4ec64f8c5de019c65b216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: []
 --- !u!1 &1061053452
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class CharacterStats
+public class CharacterInfo
 {
     private int level;
     private int currentexp;

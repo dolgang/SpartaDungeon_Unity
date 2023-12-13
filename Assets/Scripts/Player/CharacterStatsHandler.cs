@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class CharacterStatsHandler : MonoBehaviour
 {
-    [SerializeField] private CharacterStats characterStats;
-    public CharacterStats CurrentStats { get; private set; }
+    [SerializeField] private CharacterInfo characterStats;
+    public CharacterInfo CurrentStats { get; private set; }
 
     private void Awake()
     {
@@ -21,6 +21,6 @@ public class CharacterStatsHandler : MonoBehaviour
             statSO = Instantiate(characterStats.statSO);
         }
 
-        CurrentStats = new CharacterStats { statSO = statSO };
+        CurrentStats = new CharacterInfo { statSO = statSO };
     }
 }
