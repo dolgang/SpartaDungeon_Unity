@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,10 +13,12 @@ public class InventorySlot : MonoBehaviour
     public bool isEquip = false;
 
     private Image _currentSlotImage;
+    private InventoryPopupController _inventoryPopupControl;
 
     private void Awake()
     {
         equippedImage = transform.Find("Equip");
+        _inventoryPopupControl = transform.GetComponentInParent<InventoryPopupController>();
     }
 
     public void InvetoryItemDataUpdate(ItemData item)
@@ -29,10 +32,17 @@ public class InventorySlot : MonoBehaviour
         _currentSlotImage.sprite = icon;
     }
 
+    public void SetEquipPopup()
+    {
+        //_inventoryPopupControl.EquipPopupOpen();
+    }
+
     public void SetEquipItem()
     {
         isEquip = !isEquip;
 
         Inventory.instance.ItemEquipStatUpdate(isEquip, index);
+        if (Inventory.instance.inventory.Count <= index) return;
+        equippedImage.gameObject.SetActive(isEquip);
     }
 }
