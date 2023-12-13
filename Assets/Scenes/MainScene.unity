@@ -3323,6 +3323,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24e20680ac92d941926d5cd22b855c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTag: Player
+  levelText: {fileID: 878871603}
+  goldText: {fileID: 1317258352}
+  attackText: {fileID: 1637876258}
+  defenseText: {fileID: 529044027}
+  maxHealthText: {fileID: 1610919969}
+  criticalChanceText: {fileID: 1515337872}
 --- !u!4 &791088117
 Transform:
   m_ObjectHideFlags: 0
@@ -4361,9 +4368,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1034211894}
+  - component: {fileID: 1034211895}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4383,6 +4391,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1034211895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034211893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f14d55364542d4591ec96abffeb3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterStats:
+    statSO: {fileID: 11400000, guid: e77d3e5a490d50d4cb3db01023824fb1, type: 2}
 --- !u!1 &1061053452
 GameObject:
   m_ObjectHideFlags: 0
