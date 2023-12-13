@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -34,15 +34,17 @@ public class InventorySlot : MonoBehaviour
 
     public void SetEquipPopup()
     {
-        //_inventoryPopupControl.EquipPopupOpen();
+        //_inventoryPopupControl.EquipPopupOpen(isEquip);
+        // todo - InventoryPopupController 클래스에서 EquipConfirm 팝업창 토글
     }
 
     public void SetEquipItem()
     {
+        if (Inventory.instance.inventory.Count <= index) return;    // 이 검사를 SetEquipPopup 메소드로 이관
+
         isEquip = !isEquip;
 
         Inventory.instance.ItemEquipStatUpdate(isEquip, index);
-        if (Inventory.instance.inventory.Count <= index) return;
         equippedImage.gameObject.SetActive(isEquip);
     }
 }

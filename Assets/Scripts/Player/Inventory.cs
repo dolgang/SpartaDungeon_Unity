@@ -39,8 +39,6 @@ public class Inventory : MonoBehaviour
 
     public void ItemEquipStatUpdate(bool isEquip, int index)
     {
-        if (index >= inventory.Count) return;
-
         if (isEquip)
         {
             GameManager.instance.PlayerCharacterStatsHandler.AddStatModifier(inventory[index].itemStat);
