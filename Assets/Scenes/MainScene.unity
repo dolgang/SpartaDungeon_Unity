@@ -3704,7 +3704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3001139105481472235, guid: 3b721bbe8fd4e414a9b0e2c2b76c1e13, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3001139105481472235, guid: 3b721bbe8fd4e414a9b0e2c2b76c1e13, type: 3}
       propertyPath: m_AnchorMin.x
@@ -3712,15 +3712,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3001139105481472235, guid: 3b721bbe8fd4e414a9b0e2c2b76c1e13, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3001139105481472235, guid: 3b721bbe8fd4e414a9b0e2c2b76c1e13, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3001139105481472235, guid: 3b721bbe8fd4e414a9b0e2c2b76c1e13, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3001139105481472235, guid: 3b721bbe8fd4e414a9b0e2c2b76c1e13, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3752,11 +3752,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3001139105481472235, guid: 3b721bbe8fd4e414a9b0e2c2b76c1e13, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 3001139105481472235, guid: 3b721bbe8fd4e414a9b0e2c2b76c1e13, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 3001139105481472235, guid: 3b721bbe8fd4e414a9b0e2c2b76c1e13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4647,7 +4647,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1439223289}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1705686053}
+        m_TargetAssemblyTypeName: InventoryPopupController, Assembly-CSharp
+        m_MethodName: EquipPopupCancel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1439223289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5682,6 +5694,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70bfa6c348368714e8b2831a74eec166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equipPopup: {fileID: 1717132988}
+  equipConfirmText: {fileID: 1584974560}
 --- !u!1 &1717132988
 GameObject:
   m_ObjectHideFlags: 0
@@ -6075,7 +6089,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1776396355}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1705686053}
+        m_TargetAssemblyTypeName: InventoryPopupController, Assembly-CSharp
+        m_MethodName: EquipChangeConsent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1776396355
 MonoBehaviour:
   m_ObjectHideFlags: 0

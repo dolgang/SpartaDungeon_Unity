@@ -1,9 +1,45 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryPopupController : MonoBehaviour
 {
-    // todo - EquipConfirm 팝업창 캐싱하여 슬롯에서 요청이 들어오면 켜고 꺼주는 역할
-    // Yes를 고르면 SetEquipItem로 통하게끔
+    public GameObject equipPopup;
+    public TMP_Text equipConfirmText;
+    private InventorySlot _currentSlot;
+
+    public InventorySlot CurrentSlot
+    {
+        set { _currentSlot = value; }
+    }
+
+
+    public void EquipPopupOpen(bool isEquip)
+    {
+        if (!isEquip)
+        {
+            equipConfirmText.text = "Equip?";
+        }
+        else
+        {
+            equipConfirmText.text = "UnEquip?";
+        }
+
+        equipPopup.SetActive(true);
+    }
+
+    public void EquipPopupCancel()
+    {
+        equipPopup.SetActive(false);
+    }
+
+    public void EquipChangeConsent()
+    {
+        equipPopup.SetActive(false);
+
+        _currentSlot.ToggleEquipItem();
+    }
 }
